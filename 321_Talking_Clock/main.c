@@ -50,7 +50,7 @@ void attach_minutes(char *dest, size_t buf_size, int minutes) {
 }
 
 void attach_am_pm(char *dest, int hour) {
-    if (*hour <= 11) {
+    if (hour <= 11) {
         snprintf(dest + strlen(dest), 5, " am");
     } else {
         snprintf(dest + strlen(dest), 5, " pm");
